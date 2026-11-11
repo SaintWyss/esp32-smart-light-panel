@@ -1,4 +1,9 @@
-# Smart Light Panel
+<h1 align="center">esp32-smart-light-panel</h1>
+
+<p align="center"><strong>Control táctil local de iluminación inteligente.</strong><br/>ESP32 · LVGL · Tuya LAN</p>
+
+> Proyecto en desarrollo. El alcance y la validación de cada funcionalidad se detallan a continuación.
+
 
 Panel táctil para controlar un foco inteligente desde una Waveshare ESP32-S3-Touch-LCD-7 Rev. 1.2 (800×480, N16R8).
 
