@@ -7,6 +7,12 @@
 
 Panel táctil para controlar un foco inteligente desde una Waveshare ESP32-S3-Touch-LCD-7 Rev. 1.2 (800×480, N16R8). Esta versión documenta una configuración de hardware concreta; la compatibilidad con otros focos y placas requiere validación.
 
+## Tecnologías, arquitectura y diseño
+
+El firmware usa **C++17**, **Arduino para ESP32**, **PlatformIO** y **LVGL 8** sobre una pantalla táctil ESP32-S3. La comunicación local utiliza **Wi-Fi** y **Tuya LAN 3.3**; la configuración del dispositivo se guarda en NVS.
+
+La interfaz depende del contrato `LightController`: la implementación Tuya gestiona la red y existe una implementación simulada para desarrollo. El procesamiento de red corre en una tarea separada de la UI. El diseño prioriza objetivos táctiles grandes, vistas de luz, color y temporizador, y actualizaciones localizadas para reducir trabajo de renderizado. Las decisiones visuales se conservan en `design-system/`.
+
 ## Estado
 
 - Interfaz LVGL v8 basada en el ejemplo oficial de Waveshare.
