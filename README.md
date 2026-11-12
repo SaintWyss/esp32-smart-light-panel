@@ -5,7 +5,7 @@
 > Proyecto en desarrollo. El alcance y la validación de cada funcionalidad se detallan a continuación.
 
 
-Panel táctil para controlar un foco inteligente desde una Waveshare ESP32-S3-Touch-LCD-7 Rev. 1.2 (800×480, N16R8).
+Panel táctil para controlar un foco inteligente desde una Waveshare ESP32-S3-Touch-LCD-7 Rev. 1.2 (800×480, N16R8). Esta versión documenta una configuración de hardware concreta; la compatibilidad con otros focos y placas requiere validación.
 
 ## Estado
 
@@ -48,7 +48,7 @@ La carga debe hacerse sólo después de una compilación aprobada y con el respa
 platformio run --target upload
 ```
 
-El puerto configurado es la ruta USB persistente de esta placa. Una carga normal reemplaza el programa y conserva la partición NVS con la configuración.
+PlatformIO puede detectar el puerto automáticamente. Si selecciona otro dispositivo, indicá el puerto de tu placa con `--upload-port`. Una carga normal reemplaza el programa y conserva la partición NVS con la configuración; verificá siempre el entorno y el respaldo antes de cargar.
 
 ## Rendimiento
 
